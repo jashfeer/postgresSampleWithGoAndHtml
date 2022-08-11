@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update A User</h1>
+<form method="post" action="/update/process?id={{.Id}}">
+   <input type="text" name="firstname" placeholder="firstname" required value="{{.Firstname}}">
+   <br><br> <input type="text" name="lastname" placeholder="lastname" required value="{{.Lastname}}">
+   <br> <br><input type="email" name="email" placeholder="email" required value="{{.Email}}">
+  <br><br>  <select name="key" id="sr">
+    <option value="user">user</option>
+    <option value="admin">admin</option>
+</select>
+   <br><br> <input type="submit">
+</form>
+</body>
+</html>

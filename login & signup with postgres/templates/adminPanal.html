@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Admin panal</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Key</th>
+            <th></th>
+           
+        </tr>
+        {{range .}}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Firstname}}</td>
+            <td>{{.Lastname}}</td>
+            <td>{{.Email}}</td>
+            <td>{{.Password}}</td>
+            <td>{{.Key}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a style="color:rgb(6, 135, 240);text-decoration: none;" href="/update?id={{.Id}}">Update</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a style="color:red;text-decoration: none;" href="/delete?id={{.Id}}">Delete</td>
+
+        </tr>
+        {{end}}
+    </table>
+    <br>
+    <a href="/logout">Logout</a>
+</body>
+</html>
